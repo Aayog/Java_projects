@@ -1,0 +1,7 @@
+.chart-pie:hover {
+	-fx-border-color: cyan;
+	-fx-border-width : 2; 
+}
+.root{
+	-fx-background-color: silver;
+}

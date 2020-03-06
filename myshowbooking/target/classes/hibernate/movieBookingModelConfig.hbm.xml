@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-5.0.dtd">
+<hibernate-mapping package="com.myshowbooking.main.movie.model">
+		<class name="MovieBookingModel" table="movie_booking_table">
+				<id name="id" column="ID">
+					<generator class="uuid2" />
+				</id>
+				<property name="movieid" column="MOVIE_ID" />
+				<property name="bookingdate" column="BOOKING_DATE" />
+				<property name="userid" column="USER_ID" />
+				<property name="bookingexpiredate" column="BOOKING_EXPIRE_DATE" />
+				<property name="paymentmethod" column="PAYMENT_METHOD" />
+				<property name="paymentstatus" column="PAYMENT_STATUS" />
+				<property name="currency" column="CURRENCY" />
+				<property name="giftvoucher" column="GIFT_VOUCHER" />
+				<property name="offer" column="OFFER" />
+    	 </class>
+</hibernate-mapping>

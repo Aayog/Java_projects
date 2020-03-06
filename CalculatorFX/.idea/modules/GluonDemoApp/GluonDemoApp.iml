@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":GluonDemoApp" external.linked.project.path="$MODULE_DIR$/../../../GluonDemoApp" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="GluonDemo" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="android-gradle" name="Android-Gradle">
+      <configuration>
+        <option name="GRADLE_PROJECT_PATH" value=":GluonDemoApp" />
+      </configuration>
+    </facet>
+    <facet type="java-gradle" name="Java-Gradle">
+      <configuration>
+        <option name="BUILD_FOLDER_PATH" value="$MODULE_DIR$/../../../GluonDemoApp/build" />
+        <option name="BUILDABLE" value="true" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/../../../GluonDemoApp/build/classes/main" />
+    <output-test url="file://$MODULE_DIR$/../../../GluonDemoApp/build/classes/test" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../GluonDemoApp">
+      <sourceFolder url="file://$MODULE_DIR$/../../../GluonDemoApp/src/desktop/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../GluonDemoApp/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../GluonDemoApp/src/embedded/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../GluonDemoApp/src/android/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../GluonDemoApp/src/ios/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../GluonDemoApp/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../GluonDemoApp/src/android/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../GluonDemoApp/src/desktop/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../GluonDemoApp/src/ios/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../GluonDemoApp/src/embedded/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../GluonDemoApp/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../GluonDemoApp/src/test/resources" type="java-test-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../GluonDemoApp/.gradle" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Gradle: com.gluonhq:charm:4.4.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.gluonhq:charm-down-plugin-runtime-args:3.6.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.gluonhq:charm-down-plugin-push-notifications:3.6.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.gluonhq:charm-down-plugin-in-app-billing:3.6.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.gluonhq:charm-down-plugin-device:3.6.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.glassfish:javax.json:1.0.4" level="project" />
+    <orderEntry type="library" name="Gradle: com.gluonhq:charm-down-core:3.6.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.gluonhq:charm-glisten:4.4.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.gluonhq:charm-glisten-connect-view:4.4.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.gluonhq:charm-cloudlink-client:4.4.4" level="project" />
+    <orderEntry type="library" name="Gradle: com.gluonhq:connect:1.4.3" level="project" />
+    <orderEntry type="library" name="Gradle: com.gluonhq:charm-down-plugin-storage:3.6.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.gluonhq:charm-down-plugin-statusbar:3.6.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.gluonhq:charm-down-plugin-lifecycle:3.6.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.gluonhq:charm-down-plugin-display:3.6.0" level="project" />
+    <orderEntry type="library" exported="" name="charm-4.4.1" level="project" />
+    <orderEntry type="library" exported="" name="charm-down-plugin-display-3.6.0" level="project" />
+    <orderEntry type="library" exported="" name="charm-down-plugin-lifecycle-3.6.0" level="project" />
+    <orderEntry type="library" exported="" name="charm-down-plugin-statusbar-3.6.0" level="project" />
+    <orderEntry type="library" exported="" name="charm-down-plugin-storage-3.6.0" level="project" />
+    <orderEntry type="library" exported="" name="connect-1.4.3" level="project" />
+    <orderEntry type="library" exported="" name="charm-cloudlink-client-4.4.4" level="project" />
+    <orderEntry type="library" exported="" name="charm-glisten-connect-view-4.4.1" level="project" />
+    <orderEntry type="library" exported="" name="charm-glisten-4.4.1" level="project" />
+    <orderEntry type="library" exported="" name="charm-down-core-3.6.0" level="project" />
+    <orderEntry type="library" exported="" name="javax.json-1.0.4" level="project" />
+    <orderEntry type="library" exported="" name="charm-down-plugin-device-3.6.0" level="project" />
+    <orderEntry type="library" exported="" name="charm-down-plugin-in-app-billing-3.6.0" level="project" />
+    <orderEntry type="library" exported="" name="charm-down-plugin-push-notifications-3.6.0" level="project" />
+    <orderEntry type="library" exported="" name="charm-down-plugin-runtime-args-3.6.0" level="project" />
+  </component>
+</module>

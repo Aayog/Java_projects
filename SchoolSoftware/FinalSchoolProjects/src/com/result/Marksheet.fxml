@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="842.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" layoutX="150.0" layoutY="35.0" prefHeight="26.0" prefWidth="297.0" text="SCHOOL NAME">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="149.0" layoutY="62.0" prefHeight="20.0" prefWidth="297.0" text="Lalitpur, Kathmandu" />
+      <Circle fx:id="logoCircle" fill="DODGERBLUE" layoutX="72.0" layoutY="72.0" radius="52.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label alignment="CENTER" layoutX="123.0" layoutY="124.0" prefHeight="27.0" prefWidth="350.0" text="Examination Name">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="246.0" layoutY="177.0" prefHeight="17.0" prefWidth="104.0" text="Grade-Sheet" />
+      <Label layoutX="38.0" layoutY="210.0" prefHeight="20.0" prefWidth="193.0" text="THE GRADE(S) SECURED BY " />
+      <TextField fx:id="fullNameText" layoutX="231.0" layoutY="207.0" prefHeight="27.0" prefWidth="297.0" promptText="NAME" />
+      <Label layoutX="38.0" layoutY="257.0" prefHeight="20.0" prefWidth="94.0" text="OF CLASS" />
+      <TextField fx:id="classText" layoutX="121.0" layoutY="254.0" prefHeight="27.0" prefWidth="94.0" promptText="class" />
+      <Label layoutX="274.0" layoutY="257.0" prefHeight="20.0" prefWidth="119.0" text="AND ROLL NO." />
+      <TextField fx:id="rollText" layoutX="393.0" layoutY="254.0" prefHeight="27.0" prefWidth="94.0" promptText="roll" />
+      <Label layoutX="238.0" layoutY="656.0" prefHeight="20.0" prefWidth="193.0" text="GRADE POINT AVERAGE(GPA):" />
+      <TextField fx:id="examNameText" layoutX="123.0" layoutY="295.0" prefHeight="27.0" prefWidth="255.0" promptText="Final Terminal Exam" />
+      <Label layoutX="407.0" layoutY="298.0" prefHeight="20.0" prefWidth="133.0" text="ARE GIVEN BELOW:" />
+      <TableView layoutY="335.0" prefHeight="314.0" prefWidth="596.0">
+        <columns>
+          <TableColumn fx:id="snColumn" prefWidth="75.0" text="S.N" />
+          <TableColumn fx:id="subjectColumn" prefWidth="166.0" text="Subjects" />
+            <TableColumn prefWidth="116.0" text="Obtained Grade">
+               <columns>
+                  <TableColumn fx:id="theoryColumn" prefWidth="60.0" text="TH" />
+                  <TableColumn fx:id="practicalColumn" prefWidth="67.0" text="PR" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="finalGradeColumn" prefWidth="83.0" text="Final Grade" />
+            <TableColumn fx:id="gradePointColumn" prefWidth="84.0" text="Grade Point" />
+            <TableColumn fx:id="remarksColumn" prefWidth="60.0" text="Remarks" />
+        </columns>
+      </TableView>
+      <Label layoutX="38.0" layoutY="299.0" prefHeight="20.0" prefWidth="67.0" text="IN THE " />
+      <Label layoutX="319.0" layoutY="684.0" prefHeight="20.0" prefWidth="112.0" text="AVERAGE GRADE:" />
+      <Label layoutX="59.0" layoutY="788.0" prefHeight="20.0" prefWidth="112.0" text="Class Teacher" />
+      <Label layoutX="418.0" layoutY="788.0" prefHeight="20.0" prefWidth="112.0" text="Principal" />
+      <Line endX="100.0" layoutX="115.0" layoutY="777.0" startX="-100.0" />
+      <Line endX="120.0" layoutX="431.0" layoutY="777.0" startX="-80.0" />
+      <Label fx:id="gpaLabel" alignment="CENTER" layoutX="444.0" layoutY="656.0" prefHeight="20.0" prefWidth="86.0" />
+      <Label fx:id="avgGradeLabel" alignment="CENTER" layoutX="444.0" layoutY="684.0" prefHeight="20.0" prefWidth="86.0" />
+   </children>
+</AnchorPane>

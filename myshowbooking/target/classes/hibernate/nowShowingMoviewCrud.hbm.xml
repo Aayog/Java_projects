@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping package="com.myshowbooking.main.movie.model">
+	<class name="NowShowingMovieCrud" table="now_showing_movie_table">
+		<id name="id" column="ID">
+			<generator class="uuid2" />
+
+		</id>
+		<property name="moviename" column="MOVIE_NAME" />
+		<property name="star" column="STAR" />
+		<property name="like" column="USER_LIKE" />
+		<property name="country" column="COUNTRY" />
+		<property name="directedby" column="DIRECTED_BY" />
+		<property name="facebooklink" column="FACEBOOK_LINK" />
+		<property name="youtubelink" column="YOUTUBE_LINK" />
+		<property name="movieimageurl" column="MOVIE_IMAGE_URL" />
+		<property name="bannerimageurl" column="BANNER_IMAGE_URL" />
+		<property name="bookinglink" column="BOOKING_LINK" />
+		<property name="createddate" column="CREATED_DATE" />
+		<property name="createdby" column="CREATED_BY" />
+		<property name="deleteflag" column="DELETE_FLAG" />
+		<property name="updatedate" column="UPDATE_DATE" />
+		<property name="updateby" column="UPDATE_BY" />
+		<property name="comment" column="COMMENT" />
+	</class>
+</hibernate-mapping>

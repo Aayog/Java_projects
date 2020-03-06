@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping
+	package="com.myshowbooking.main.user.model">
+	<class name="Role" table="role">
+		<id name="id" column="ID">
+			<generator class="guid" />
+		</id>
+		<property name="name" column="NAME" />
+	</class>
+</hibernate-mapping>

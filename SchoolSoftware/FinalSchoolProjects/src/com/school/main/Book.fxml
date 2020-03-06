@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="466.0" prefWidth="884.0" styleClass="main" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.book.BookController">
+   <children>
+      <JFXButton fx:id="addBook" alignment="CENTER" buttonType="RAISED" layoutX="614.0" layoutY="14.0" onAction="#onClickAddBook" prefHeight="36.0" prefWidth="249.0" ripplerFill="#d33131" style="-fx-background-color: #6f7572;" text="ADD NEW BOOK" />
+      <TableView fx:id="bookViewTable" layoutX="66.0" layoutY="51.0" prefHeight="403.0" prefWidth="493.0" style="-fx-background-color: #9ea8a3;">
+         <columns>
+            <TableColumn fx:id="subjectID" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="subjectName" prefWidth="188.0" text="SUBJECT_NAME" />
+            <TableColumn fx:id="_class" prefWidth="229.0" text="CLASS" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="updateButton" layoutX="686.0" layoutY="380.0" onAction="#onClickUpdateButton" prefHeight="36.0" prefWidth="188.0" style="-fx-background-color: #6f7572;" text="UPDATE" />
+      <Label alignment="CENTER" layoutX="138.0" layoutY="21.0" prefHeight="24.0" prefWidth="348.0" text="Books Information" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelName" layoutX="705.0" layoutY="148.0" prefHeight="36.0" prefWidth="144.0" text="Subject" textFill="#ffdcdc">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelClass" layoutX="705.0" layoutY="215.0" prefHeight="36.0" prefWidth="144.0" text="Class" textFill="#ffdcdc">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

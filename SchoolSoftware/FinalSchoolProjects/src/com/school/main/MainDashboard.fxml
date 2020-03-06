@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.NotificationPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1050.0" styleClass="main" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.school.main.DemoController">
+   <children>
+      <Circle fx:id="user" layoutX="59.0" layoutY="62.0" radius="62.0" stroke="BLACK" strokeType="INSIDE" styleClass="userImage" />
+      <Label fx:id="clockLable" alignment="CENTER" layoutX="759.0" layoutY="12.0" prefHeight="48.0" prefWidth="259.0" text="TIME" textFill="#f2eeed">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="USER_NAME" layoutX="121.0" layoutY="79.0" prefHeight="45.0" prefWidth="216.0" text="USER_NAME" textFill="WHITE">
+         <font>
+            <Font size="29.0" />
+         </font>
+         <graphic>
+            <Circle fill="#00ff1a" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+         </graphic>
+      </Label>
+      <Label layoutX="127.0" layoutY="68.0" prefHeight="25.0" prefWidth="59.0" text="WELCOME" textFill="#fcf8f8" />
+      <NotificationPane layoutX="199.0" layoutY="318.0" prefHeight="0.0" prefWidth="30.0" />
+      <Separator layoutX="99.0" layoutY="114.0" prefHeight="0.0" prefWidth="924.0" style="-fx-background-color: #6dce52;" />
+      <ImageView fitHeight="70.0" fitWidth="59.0" layoutX="715.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@nepalflag.gif" />
+         </image>
+      </ImageView>
+      <Label fx:id="dateLable" alignment="CENTER" layoutX="747.0" layoutY="59.0" prefHeight="58.0" prefWidth="268.0" text="DATE" textFill="#f2eeed">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="homeButton" buttonType="RAISED" layoutX="-25.0" layoutY="197.0" onAction="#onPressHome" prefHeight="45.0" prefWidth="200.0" ripplerFill="#e89191" styleClass="bookInfoButton" text="HOME">
+         <graphic>
+            <FontAwesomeIconView fill="#f8f0f0" glyphName="HOME" size="40" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="studentButton" buttonType="RAISED" layoutX="-14.0" layoutY="250.0" onAction="#onPressStudentButton" prefHeight="45.0" prefWidth="200.0" ripplerFill="#e89191" styleClass="bookInfoButton" text="STUDENT">
+         <graphic>
+            <FontAwesomeIconView fill="#f8f0f0" glyphName="USER" size="40" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="bookButton" buttonType="RAISED" layoutX="-25.0" layoutY="304.0" onAction="#onPressBook" prefHeight="51.0" prefWidth="216.0" ripplerFill="#e89191" styleClass="bookInfoButton" text="    BOOK">
+         <graphic>
+            <FontAwesomeIconView fill="#f8f0f0" glyphName="BOOK" size="40" />
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="-7.0" layoutY="354.0" onAction="#onPressAddResult" prefHeight="45.0" prefWidth="200.0" ripplerFill="#e89191" styleClass="bookInfoButton" text="ADD-RESULT">
+         <graphic>
+            <FontAwesomeIconView fill="#f8f0f0" glyphName="BOOK" size="40" text="" />
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="-6.0" layoutY="405.0" onAction="#onPressViewResult" prefHeight="45.0" prefWidth="200.0" ripplerFill="#e89191" styleClass="bookInfoButton" text="VIEW-RESULT">
+         <graphic>
+            <FontAwesomeIconView fill="#f8f0f0" glyphName="BOOK" size="40" text="" />
+         </graphic>
+      </JFXButton>
+      <AnchorPane fx:id="mainGround" layoutX="166.0" layoutY="133.0" prefHeight="466.0" prefWidth="884.0" />
+   </children>
+</AnchorPane>

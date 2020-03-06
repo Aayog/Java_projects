@@ -1,0 +1,32 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.main{
+	-fx-background-image: url("wall.jpg");
+	-fx-background-repeat: space ;
+	-fx-background-size: 1050 600.0;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30.0, 0.5, 0.0, 0.0); 
+}
+.button{
+	-fx-text-fill: white;
+	
+}
+
+.searchTextField,.searchCombo,.textfield,.serchText{
+	-fx-text-fill: white;
+	-fx-background-color:#6f7572;
+}
+.userImage{
+	-fx-effect: dropshadow(three-pass-box, white, 20.0, 0.5, 0.0, 0.0);
+	-fx-border-color:white;
+	
+}
+.bookInfoButton{
+	
+	-fx-text-fill: white;
+}
+.add:hover,.add:focus{
+	
+	-fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-scale-z: 1.1;
+}

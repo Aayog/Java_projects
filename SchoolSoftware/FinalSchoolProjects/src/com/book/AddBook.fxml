@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="301.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="com.book.AddBookController">
+   <children>
+      <JFXTextField fx:id="subjectName" labelFloat="true" layoutX="115.0" layoutY="94.0" prefHeight="34.0" prefWidth="270.0" promptText="Subject Name">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </JFXTextField>
+      <Label alignment="CENTER" layoutX="91.0" layoutY="24.0" prefHeight="34.0" prefWidth="259.0" text="Add Book">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="addButton" layoutX="62.0" layoutY="232.0" onAction="#onClickAdd" prefHeight="47.0" prefWidth="146.0" text="Add">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="250.0" layoutY="232.0" onAction="#onClickCancel" prefHeight="47.0" prefWidth="146.0" text="Cancel">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+      <ComboBox fx:id="_classSelect" layoutX="115.0" layoutY="174.0" prefHeight="24.0" prefWidth="270.0" promptText="Class" />
+   </children>
+</AnchorPane>

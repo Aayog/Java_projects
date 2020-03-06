@@ -1,0 +1,11 @@
+/* @charset "UTF-8";
+ */
+.paneBack{
+	-fx-background-color :  rgb(0,0,0,0.4);
+}
+.textField{
+	-fx-text-fill : white;
+}
+.combo-box .cell:selected {
+    -fx-text-fill: white;
+}
