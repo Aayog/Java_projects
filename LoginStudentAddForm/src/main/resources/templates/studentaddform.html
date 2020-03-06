@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+
+<title>Form Wizard</title>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="page-title">
+			<h2> Student Form</h2>
+		</div>
+		<div class = "row">
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-block">
+						<div class="row relative">
+							<form id="studentForm" class="width-100" th:action="@{/submit}" >
+								<div class="tab-content">
+									<div id="step1" class="tab-pane fade in active">
+										
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

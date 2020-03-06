@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+
+<script type="text/javascript" th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+<link  type="text/css" rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.css}" >
+<head>
+<script type="text/javascript">
+	function addStudent(){
+		window.location = '/add';
+	}
+</script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table class="table table-striped">
+		<tr>
+			<th>ID</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Address</th>
+			<th th:if="${role=='ROLE_ADMIN'}">Update</th>
+			<th th:if="${role=='ROLE_ADMIN'}">Delete<button onclick="addStudent()" class="btn btn-sm btn-dark">Add New Student</button></th>
+		</tr>
+		<tr th:each="student,iterStat: ${list}">
+			<td th:utext="${iterStat.count}">...</td>
+			<td th:utext="${student.fname}">...</td>
+			<td th:utext="${student.lname}">...</td>
+			<td th:utext="${student.address}">...</td>
+			<td th:if="${role=='ROLE_ADMIN'}">
+			<form action ="#" th:action ="@{/update}" method ="post">
+				<button type = "submit" th:value = "${student.id}" th:name = "update" class="btn btn-info btn-sm" >Update</button>	
+			</form>
+			</td>
+			<td th:if="${role=='ROLE_ADMIN'}">
+			<form action ="#" th:action ="@{/delete}" method ="post">
+				<button type = "submit" th:value = "${student.id}" th:name = "delete" class="btn btn-info btn-sm" >Delete</button>	
+			</form>
+			</td>
+		</tr>
+	</table>
+	<div class = "container-fluid" id = "updateForm" th:if="${studentModel != null}" >
+		<form action="#" th:action = "@{/submitUpdate}" method="post" th:object="${returnModel}">
+				<input id ="form_id" name = "id" placeholder= "ID" th:value="${studentModel.id}" type="hidden" >
+				<input id ="form_fname" name = "fname" type = "text" placeholder= "First Name" th:value="${studentModel.fname}">
+				<input id ="form_lname" name = "lname" type = "text" placeholder= "Last Name" th:value="${studentModel.lname}">
+				<input id ="form_address" name = "address" type = "text" placeholder= "Address" th:value="${studentModel.address}"><br>
+				<input type="submit" value="Submit"> 
+		</form>
+	</div>
+</body>
+</html>

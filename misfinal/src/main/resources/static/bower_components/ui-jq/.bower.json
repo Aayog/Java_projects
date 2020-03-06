@@ -1,0 +1,17 @@
+{
+  "name": "angular-ui-jq",
+  "main": "./jq.js",
+  "dependencies": {
+    "angular": ">= 1.0.2"
+  },
+  "homepage": "https://github.com/angular-ui/ui-utils",
+  "_release": "7fe9e7fe6d",
+  "_resolution": {
+    "type": "branch",
+    "branch": "bower-jq",
+    "commit": "7fe9e7fe6da5d9218de0679f4dfbf663a5dbf532"
+  },
+  "_source": "https://github.com/angular-ui/ui-utils.git",
+  "_target": "bower-jq",
+  "_originalSource": "https://github.com/angular-ui/ui-utils.git"
+}

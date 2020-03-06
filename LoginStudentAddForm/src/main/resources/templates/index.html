@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.js"></script>
+<script>
+	var balls = [];
+	function setup(){
+		createCanvas(windowWidth,windowHeight);
+		background(200,230,43);
+		for(var i = 0; i < 10; i++){
+			balls.push(new Ball());
+		}
+		fill(0,100);
+		button = createButton('Start');
+		button.mousePressed(linkHTML);
+	}
+	
+	function linkHTML(){
+		window.location = "studentaddform";
+	}
+	function draw(){
+		fill(255,100);
+		background(200,230,43);
+		for(var i = 0; i < balls.length; i++){
+			balls[i].update();
+			balls[i].draw();
+		}
+		if(frameCount >100){
+			fill(0);
+			textSize(200);
+			text("WELCOME",140,200);
+		}
+		if(frameCount>200){
+			fill(0,100);
+			button.position(width/2,height/2);
+			/* rectMode(CENTER); */
+			/* rect(width/2,height/2,400,100); */
+			
+			/* textSize(50); 
+			stroke(0);
+			fill(0);
+			text("Start",width/2-50,height/2+20); */ 
+		}
+	}
+	/* function mousePressed(){
+		if(frameCount>200){
+			if((mouseX > width/2 - 200) && (mouseX < width + 200)  && (mouseY > height/2 - 50) && (mouseY < height/2 + 50)){
+				 console.log("Start");
+				
+			}
+		}
+	} */
+	function Ball(){
+		this.x = random(width);
+		this.y = random(height);
+		this.xSpeed = random(1,5);
+		this.ySpeed = random(2,5);
+		this.r = 15;
+		this.draw = function(){
+			noStroke();
+			ellipse(this.x,this.y,this.r*2,this.r*2);
+		}
+		this.update = function(){
+			this.x+= this.xSpeed;
+			this.y+= this.ySpeed;
+			this.ySpeed += random(-1,1);
+			this.xSpeed += random(-1,1);
+			if(this.x < this.r || this.x > width - this.r )this.xSpeed = -this.xSpeed;
+			if(this.y < this.r || this.y > height - this.r )this.ySpeed = -this.ySpeed;
+		}
+	}
+</script>
+<title>Hello, World!</title>
+</head>
+<body>
+	<div class = "container-fluid">
+	</div>
+
+</body>
+</html>

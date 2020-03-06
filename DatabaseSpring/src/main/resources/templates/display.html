@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+<head>
+
+<!-- <script src="../jquery-3.3.1.js" type="text/javascript"></script> -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#updateForm").hide();
+	});
+	function addStudent(){
+		window.location = '/add';
+	}
+
+</script>
+<script th:inline="javascript">
+/*<![CDATA[*/
+	
+	user = [[${list}]];
+	function update(id){
+		console.log("update");
+		$("#updateForm").show();
+		/* console.log(user) */
+		for (i = 0; i< user.length; i++){
+			student = user[i];
+			if(student.id == id){
+	    		$("#form_id").val(student.id);
+	    		$("#form_name").val(student.name);
+	    		$("#form_address").val(student.address);
+			}
+		}
+	};
+   
+
+/*]]>*/
+</script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table class="table table-striped">
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Address</th>
+			<th>Update</th>
+			<th>Delete<button onclick="addStudent()" class="btn btn-sm btn-dark">Add New Student</button></th>
+		</tr>
+		<tr th:each="student : ${list}">
+			<td th:utext="${student.id}">...</td>
+			<td th:utext="${student.name}">...</td>
+			<td th:utext="${student.address}">...</td>
+			<td><button type="button" class="btn btn-info btn-sm" th:onclick="'update('+${student.id}+')'"  value = "update" th:name ="'update'+${student.id}" >Update</button></td>
+			<td>
+			<form action ="#" th:action ="@{/delete}" method ="POST">
+				<button type = "submit" th:value = "${student.id}" th:name = "id" class="btn btn-info btn-sm" >Delete</button>	
+			</form>
+			</td>
+		</tr>
+	</table>
+	<div class = "container-fluid" id = "updateForm">
+		<form action="#" th:action = "@{/submit}" method="post" th:object="${studentModel}">
+				<input id ="form_id" name = "id" type = "text" placeholder= "ID" readonly> <!-- th:value = "${studentModel.id}" -->
+				<input id ="form_name" name = "name" type = "text" placeholder= "Name">
+				<input id ="form_address" name = "address" type = "text" placeholder= "Address"><br>
+				<input type="submit" value="Submit"> 
+		</form>
+	</div>
+</body>
+</html>

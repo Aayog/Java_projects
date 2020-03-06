@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+<head>
+
+<!-- <script src="../jquery-3.3.1.js" type="text/javascript"></script> -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	function addStudent(){
+		window.location = '/add';
+	}
+
+</script>
+<script th:inline="javascript">
+/*<![CDATA[*/
+	/*$(document).ready(function() {
+		$("#updateForm").hide();
+		user = [[${list}]];
+		function update(model){
+			console.log(model);
+			/* console.log(user) 
+			for (i = 0; i< user.length; i++){
+				student = user[i];
+				if(student.id == model.id){
+		    		$("#form_id").val(student.id);
+		    		$("#form_fname").val(student.fname);
+		    		$("#form_lname").val(student.lname);
+		    		$("#form_address").val(student.address);
+				}
+			}
+			$("#updateForm").show();
+		}
+	});
+/*]]> */
+</script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table class="table table-striped">
+		<tr>
+			<th>ID</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Address</th>
+			<th>Update</th>
+			<th>Delete<button onclick="addStudent()" class="btn btn-sm btn-dark">Add New Student</button></th>
+		</tr>
+		<tr th:each="student,iterStat: ${list}">
+			<td th:utext="${iterStat.count}">...</td>
+			<td th:utext="${student.fname}">...</td>
+			<td th:utext="${student.lname}">...</td>
+			<td th:utext="${student.address}">...</td>
+			<td>
+			<form action ="#" th:action ="@{/update}" method ="post">
+				<button type = "submit" th:value = "${student.id}" th:name = "update" class="btn btn-info btn-sm" >Update</button>	
+			</form>
+			</td>
+			<td>
+			<form action ="#" th:action ="@{/delete}" method ="post">
+				<button type = "submit" th:value = "${student.id}" th:name = "delete" class="btn btn-info btn-sm" >Delete</button>	
+			</form>
+			</td>
+		</tr>
+	</table>
+	<div class = "container-fluid" id = "updateForm" th:if="${studentModel != null}" >
+		<form action="#" th:action = "@{/submitUpdate}" method="post" th:object="${returnModel}">
+				<input id ="form_id" name = "id" placeholder= "ID" th:value="${studentModel.id}" type="hidden" >
+				<input id ="form_fname" name = "fname" type = "text" placeholder= "First Name" th:value="${studentModel.fname}">
+				<input id ="form_lname" name = "lname" type = "text" placeholder= "Last Name" th:value="${studentModel.lname}">
+				<input id ="form_address" name = "address" type = "text" placeholder= "Address" th:value="${studentModel.address}"><br>
+				<input type="submit" value="Submit"> 
+		</form>
+	</div>
+</body>
+</html>

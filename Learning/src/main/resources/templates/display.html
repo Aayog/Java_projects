@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" >
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1> Students</h1>
+	<table border= "1" class="table table-hover">
+		<tr>
+			<th>Name</th>
+			<th>Address</th>
+			<th>Age</th>
+		</tr>
+		<tr th:each="student : ${students}" >
+			<td th:utext="${student.name}">...</td>
+			<td th:utext="${student.address}">...</td>
+			<td th:utext="${student.age}">...</td>
+		</tr>
+	</table>
+	<a href="AddStudent"> Add another student</a>
+</body>
+</html>

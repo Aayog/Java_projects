@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="#" th:action = "@{/submit}" method="post" th:object="${studentModel}">
+		<input name = "id" type = "text" placeholder= "ID">
+		<input name = "fname" type = "text" placeholder= "First Name">
+		<input name = "lname" type = "text" placeholder= "Last Name">
+		<input name = "address" type = "text" placeholder= "Address"><br>
+		<input type="submit" value="Submit"> 
+	</form>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html   xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var maxHistory = 4;
+		var addButton = $(".add_button");
+		var wrapper = $(".form_wrapper");
+		var addFormHtml = '<div><div class="row"><div class="col-md-3"><label for="student_id">Student ID : </label></div><div class="col-md-3"><input type="text" id="student_id" name = "student_id[]" placeholder="Student ID"></div></div><div class="row"><div class="col-md-3"><label for="college_school_name">College/School Name : </label></div><div class="col-md-3"><input type="text" id="college_school_name" name = "college_school_name[]" placeholder="Name"></div></div><div class="row"><div class="col-md-3"><label for="address_school_college">College/School Address : </label></div><div class="col-md-3"><input type="text" id="address_school_college" name = "address_school_college[]" placeholder="Address"></div></div><div class="row"><div class="col-md-3"><label for="university">College/School University : </label></div><div class="col-md-3"><input type="text" id="university" name = "university[]" placeholder="Affiliated University"></div></div><div class="row"><div class="col-md-3"><label for="datefrom">Date From : </label></div><div class="col-md-3"><input type="date" id="datefrom" name = "datefrom[]" placeholder="Classes start date"></div></div><div class="row"><div class="col-md-3"><label for="dateto">Date From : </label></div><div class="col-md-3"><input type="date" id="dateto" name = "dateto[]" placeholder="Classes end date"></div></div><div class="row"><div class="col-md-3"><label for="qualification">Qualification got : </label></div><div class="col-md-3"><input type="text" id="qualification" name = "qualification[]" placeholder="Degree from this College"></div></div><div class="row"><div class="col-md-3"><label for="grade_percentage">Grade/Percentage : </label></div><div class="col-md-3"><input type="text" id="grade_percentage" name = "grade_percentage[]" placeholder="Grade/Percentage earned"></div></div><a href="#" class="remove_button"><button onclick="">x</button></a><hr></div>';
+		var x=1;
+		$(addButton).click(function(e){
+			e.preventDefault();
+			if(x < maxHistory){
+				x++;
+				$(wrapper).append(addFormHtml);
+			}
+		});
+		$(wrapper).onclick("click",".remove_button",function(e){
+			e.preventDefault();
+			$(this).parents("row").remove();
+			x--;
+		});
+			
+	});
+</script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="container-fluid">
+		<h1> Add student history</h1>
+		<form th:action="@{/submit}" method="POST">
+			<div class="form_wrapper">
+				<div>
+				<div class="row">
+					<div class="col-md-3">
+						<label for="student_id">Student ID : </label>
+					</div>
+					<div class="col-md-3">
+						<input type="text" id="student_id" name = "student_id[]" placeholder="Student ID">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<label for="college_school_name">College/School Name : </label>
+					</div>
+					<div class="col-md-3">
+						<input type="text" id="college_school_name" name = "college_school_name[]" placeholder="Name">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<label for="address_school_college">College/School Address : </label>
+					</div>
+					<div class="col-md-3">
+						<input type="text" id="address_school_college" name = "address_school_college[]" placeholder="Address">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<label for="university">College/School University : </label>
+					</div>
+					<div class="col-md-3">
+						<input type="text" id="university" name = "university[]" placeholder="Affiliated University">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<label for="datefrom">Date From : </label>
+					</div>
+					<div class="col-md-3">
+						<input type="date" id="datefrom" name = "datefrom[]" placeholder="Classes start date">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<label for="dateto">Date To : </label>
+					</div>
+					<div class="col-md-3">
+						<input type="date" id="dateto" name = "dateto[]" placeholder="Classes end date">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<label for="qualification">Qualification got : </label>
+					</div>
+					<div class="col-md-3">
+						<input type="text" id="qualification" name = "qualification[]" placeholder="Degree from this College">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<label for="grade_percentage">Grade/Percentage : </label>
+					</div>
+					<div class="col-md-3">
+						<input type="text" id="grade_percentage" name = "grade_percentage[]" placeholder="Grade/Percentage earned">
+					</div>
+				</div>
+				<hr>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+						<input type="submit" value="Submit">
+					</div>
+					<div class="col-md-3">
+						<input type="reset" value="Cancel">
+					</div>
+			</div>
+		</form>
+		<a href="#" class="add_button"><button onclick="">+</button></a>
+	</div>
+</body>
+</html>
